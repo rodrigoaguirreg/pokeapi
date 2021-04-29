@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mx-auto my-5"  *ngFor="let pokemo of pokemons; let i = index">
+<mat-card >
+  <mat-card-header>
+    <div mat-card-avatar ></div>
+    <mat-card-title>{{pokemo.nombre}}</mat-card-title>
+    <mat-card-title>{{pokemo.tipo}}</mat-card-title>
+  </mat-card-header>
+  <div class="imagenCapturado">
+  <img mat-card-image src="{{pokemo.img}}" alt="Photo of a pokemons">
+</div>
+  <mat-card-content class="cardContent">
+   <button (click)="elimarPokemonCapturado(pokemo)">Liberar</button>
+  </mat-card-content>
+</mat-card>
+</div>
+</div>
+</div>

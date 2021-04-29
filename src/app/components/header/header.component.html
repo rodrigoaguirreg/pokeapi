@@ -1,0 +1,30 @@
+<!-- <nav class="navbar navbar-black bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/img/logopoked.png" alt="" width="30" height="24" class="d-inline-block align-text-top" (click)="home()">
+      Pokeapp
+    </a>
+    <li class="nav-item" >
+      <a >
+        <h4 class="capturadosdiv" (click)="capturados()">Capturados</h4>
+        <h4 class="capturadosdiv" (click)="registrar()">Registrar</h4>
+      </a>
+    </li>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-black bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/img/logopoked.png" alt="" width="30" height="24" class="d-inline-block align-text-top" (click)="home()">
+      Pokeapp
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" aria-current="page" href="#">Home</a>
+        <a class="nav-link" (click)="capturados()">Capturados</a>
+        <a class="nav-link" (click)="registrar()">Registrar</a>
+      </div>
+    </div>
+  </div>
+</nav>

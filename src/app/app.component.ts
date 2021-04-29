@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pokeapi';
+  handleSearch(value:string){
+    this.filter_value = value;
+
+  }
+  filter_value = ''
 }
