@@ -10,10 +10,10 @@
   <mat-card-content>
     <label>Cambiar poder:</label>
     <br>
-  <input type="text" placeholder="Llenar nuevo poder" id="actualizaDato">
+  <input #actualizarData type="text" placeholder="Llenar nuevo poder" id="actualizaDato">
   </mat-card-content>
   <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close (click)="closeModal()">Cancel</button>
+    <button mat-button mat-dialog-close (click)="closeModal(actualizarData.value)">Cancel</button>
   </mat-dialog-actions>
 
 </mat-card>

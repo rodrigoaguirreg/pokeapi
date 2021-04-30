@@ -28,15 +28,15 @@ export class RegistrarComponent implements OnInit {
 
   })
 
-  guardarDatos(){
-    this.nombreInput = document.getElementById("nombrePokemonInput");
-    this.nombreverdadero = this.nombreInput.value
+  guardarDatos(nombre,poder,imagen){
+    // this.nombreInput = document.getElementById("nombrePokemonInput");
+    this.nombreverdadero = nombre;
 
-    this.poderInput = document.getElementById("poderPokemonInput");
-    this.poderverdadero = this.poderInput.value
+    // this.poderInput = document.getElementById("poderPokemonInput");
+    this.poderverdadero = poder;
 
-    this.imagenInput = document.getElementById("imagenPokemonInput");
-    this.imagenverdadero = this.imagenInput.value
+    // this.imagenInput = document.getElementById("imagenPokemonInput");
+    this.imagenverdadero = imagen;
 
 
         // .push(this.nombreInput.value, this.poderInput.value, this.imagenInput.value);
@@ -44,7 +44,7 @@ export class RegistrarComponent implements OnInit {
       console.log(data);
 
      });
-     this.nuevoPokemon.push(this.nombreInput.value, this.poderInput.value, this.imagenInput.value);
+     this.nuevoPokemon.push(this.nombreverdadero, this.poderverdadero, this.imagenverdadero);
 
      console.log(this.nuevoPokemon,'nuevopokemon');
      this.dialogRef.close( this.nuevoPokemon)

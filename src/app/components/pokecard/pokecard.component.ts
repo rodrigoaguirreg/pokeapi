@@ -18,6 +18,7 @@ import { RegistrarComponent } from '../registrar/registrar.component';
 
 export class PokecardComponent implements OnInit {
 
+
   closeResult: string;
   pokemons = [];
   @Input() filter_valor: string;
@@ -32,7 +33,8 @@ export class PokecardComponent implements OnInit {
     .pipe(
       debounceTime(300)
     )
-    .subscribe(value => this.searchEmitter.emit(value))
+    .subscribe(value => this.searchEmitter.emit(value));
+
   }
 
 
@@ -40,9 +42,7 @@ export class PokecardComponent implements OnInit {
       let pokemonCapturadoNombre = pokemon.nombre;
       let pokemonCapturadoPoder = pokemon.tipo;
       let pokemonCapturadoImagen = pokemon.img;
-      console.log(pokemonCapturadoNombre);
-      console.log(pokemonCapturadoPoder);
-      console.log(pokemonCapturadoImagen);
+
       this.http.post<PokemonCapturado>('https://6078e33de7f4f50017184d9f.mockapi.io/api/v1/smiledu/pokedex', { nombre: pokemonCapturadoNombre, tipo: pokemonCapturadoPoder, img: pokemonCapturadoImagen}).subscribe(data =>{
       console.log(data)
       this.snackbar.open('Pokemon Capturado', 'Cancelar', {
@@ -75,7 +75,7 @@ export class PokecardComponent implements OnInit {
       dialogReferen.afterClosed().subscribe(result => {
         console.log(result);
         this.pokemons.unshift({nombre: result[0], tipo: result[1], img: result[2]});
-         console.log(this.pokemons);
+         console.log(this.pokemons.length);
       })
     }
 

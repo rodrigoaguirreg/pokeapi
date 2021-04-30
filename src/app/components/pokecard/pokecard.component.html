@@ -16,7 +16,8 @@
 </mat-card> -->
 <input [formControl]="search" placeholder="Buscar">
 <input class="buttonregistrar" type="reset" value="Registrar" (click)="registrarPokemon()">
-
+<br>
+<app-cantidad-pokemons [Nuevospokemons]="pokemons"></app-cantidad-pokemons>
 <div class="row" >
   <div class="column" *ngFor="let pokemon of pokemons | search:filter_valor; let i = index">
     <div class="card">

@@ -1,0 +1,109 @@
+.pokemonsTipoAgua{
+  display: inline-block;
+  padding: 10px 5px 1px 5px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ed6868;
+  border: none;
+  border-radius: 15px;
+  width: auto;
+  margin-left: 2%;
+  line-height: 20px;
+  vertical-align: middle;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.pokemonsTipoFuego{
+  display: inline-block;
+  padding: 10px 5px 1px 5px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ed6868;
+  border: none;
+  border-radius: 15px;
+  width: auto;
+  margin-left: 6%;
+  line-height: 20px;
+  vertical-align: middle;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  }
+.pokemonsTipoTierra{
+  display: inline-block;
+  padding: 10px 5px 1px 5px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ed6868;
+  border: none;
+  border-radius: 15px;
+  width: auto;
+  margin-left: 6%;
+  line-height: 20px;
+  vertical-align: middle;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  }
+.pokemonsTipoPlanta{
+  display: inline-block;
+  padding: 10px 5px 1px 5px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ed6868;
+  border: none;
+  border-radius: 15px;
+  width: auto;
+  margin-left: 6%;
+  line-height: 20px;
+  vertical-align: middle;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  }
+.pokemonsTipoElectrico{
+  display: inline-block;
+  padding: 10px 5px 1px 5px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ed6868;
+  border: none;
+  border-radius: 15px;
+  width: auto;
+  margin-left: 6%;
+  line-height: 20px;
+  vertical-align: middle;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.pokemonsTipoOtro{
+  display: inline-block;
+  padding: 10px 5px 1px 5px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ed6868;
+  border: none;
+  border-radius: 15px;
+  width: auto;
+  margin-left: 6%;
+  line-height: 20px;
+  vertical-align: middle;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+

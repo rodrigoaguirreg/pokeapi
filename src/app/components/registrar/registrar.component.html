@@ -5,13 +5,13 @@
 <br>
 <form [formGroup]="miFormulario">
 <mat-label>Nombre:</mat-label><br>
-<input matInput placeholder="nombre del pokemon" id="nombrePokemonInput" formControlName="nombrePokemon">
+<input #nombrePoke matInput placeholder="nombre del pokemon" id="nombrePokemonInput" formControlName="nombrePokemon">
 <br>
 <label>Poder:</label><br>
-<input placeholder="poder del pokemon" id="poderPokemonInput" formControlName="poderPokemon"><br>
+<input #poderPoke placeholder="poder del pokemon" id="poderPokemonInput" formControlName="poderPokemon"><br>
 <label>Link de la imagen:</label><br>
-<input placeholder="link" id="imagenPokemonInput" formControlName="imagenPokemon"><br><br>
-<input type="reset" value="Registrar" (click)="guardarDatos()">
+<input #imagenPoke placeholder="link" id="imagenPokemonInput" formControlName="imagenPokemon"><br><br>
+<input [disabled]="miFormulario.invalid" type="reset" value="Registrar" (click)="guardarDatos(nombrePoke.value, poderPoke.value,imagenPoke.value)">
 </form>
 </div>
 </mat-card-content>

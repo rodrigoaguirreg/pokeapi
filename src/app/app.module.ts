@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrarComponent } from './components/registrar/registrar.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ModalConfirmacionComponent } from './components/modal-confirmacion/modal-confirmacion.component';
+import { CantidadPokemonsComponent } from './components/cantidad-pokemons/cantidad-pokemons.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ModalConfirmacionComponent } from './components/modal-confirmacion/moda
     SearchPipe,
     ModalPokeComponent,
     RegistrarComponent,
-    ModalConfirmacionComponent
+    ModalConfirmacionComponent,
+    CantidadPokemonsComponent
   ],
   imports: [
     BrowserModule,
