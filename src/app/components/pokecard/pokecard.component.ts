@@ -8,6 +8,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { ModalPokeComponent } from '../modal-poke/modal-poke.component';
 import { HttpClient } from '@angular/common/http';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { RegistrarComponent } from '../registrar/registrar.component';
 
 @Component({
   selector: 'app-pokecard',
@@ -66,7 +67,17 @@ export class PokecardComponent implements OnInit {
         pokemon.tipo = result;
       });
     }
-
+9
+    registrarPokemon(){
+      const dialogReferen = this.dialog.open(RegistrarComponent,{
+        width:'500px'
+      })
+      dialogReferen.afterClosed().subscribe(result => {
+        console.log(result);
+        this.pokemons.unshift({nombre: result[0], tipo: result[1], img: result[2]});
+         console.log(this.pokemons);
+      })
+    }
 
     search = new FormControl('')
 

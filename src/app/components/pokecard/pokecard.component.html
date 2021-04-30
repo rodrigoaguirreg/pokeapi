@@ -15,6 +15,7 @@
   </mat-card-content>
 </mat-card> -->
 <input [formControl]="search" placeholder="Buscar">
+<input class="buttonregistrar" type="reset" value="Registrar" (click)="registrarPokemon()">
 
 <div class="row" >
   <div class="column" *ngFor="let pokemon of pokemons | search:filter_valor; let i = index">
@@ -25,8 +26,8 @@
       <img mat-card-image width="80" height="100" src="{{pokemon.img}}" alt="Photo of a pokemons">
     </div>
       <br>
-      <button  (click)="capturarPok(pokemon)" >Capturar</button>
-      <button mat-raised-button (click)="verPokemon(pokemon)" >Ver</button>
+      <button class="button" (click)="capturarPok(pokemon)" >Capturar</button><br>
+      <button mat-raised-button class="button" (click)="verPokemon(pokemon)" >Ver</button>
     </div>
   </div>
 </div>

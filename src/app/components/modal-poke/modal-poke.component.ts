@@ -21,7 +21,13 @@ export class ModalPokeComponent implements OnInit {
   }
   closeModal(){
     this.datso = document.getElementById("actualizaDato");
+    let valor_dato = this.datso.value;
     console.log(this.datso.value)
-    this.dialogRef.close(this.datso.value)
+    console.log(valor_dato.length)
+
+    if(valor_dato.length >= 1) this.dialogRef.close(this.datso.value);
+    else{
+      this.dialogRef.close(this.data.poder)
+    }
   }
 }

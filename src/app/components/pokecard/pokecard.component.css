@@ -40,3 +40,14 @@ body {
   background-color: #f1f1f1;
 }
 
+.buttonregistrar{
+  display: inline-block;
+	color: white;
+
+	font-family: 'Rubik One', sans-serif;
+	text-decoration: none;
+	background-color: #3498db;
+}
+.button{
+  margin-left: 25%;
+}

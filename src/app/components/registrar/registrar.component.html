@@ -3,13 +3,16 @@
   <div class="registrarrr container">
   <h1>Registrar Pokemon</h1>
 <br>
+<form [formGroup]="miFormulario">
 <mat-label>Nombre:</mat-label><br>
-<input matInput placeholder="nombre del pokemon" id="nombrePokemonInput"><br>
+<input matInput placeholder="nombre del pokemon" id="nombrePokemonInput" formControlName="nombrePokemon">
+<br>
 <label>Poder:</label><br>
-<input placeholder="poder del pokemon" id="poderPokemonInput"><br>
+<input placeholder="poder del pokemon" id="poderPokemonInput" formControlName="poderPokemon"><br>
 <label>Link de la imagen:</label><br>
-<input placeholder="link" id="imagenPokemonInput"><br><br>
-<button type="submit" (click)="guardarDatos()">Registrar</button>
+<input placeholder="link" id="imagenPokemonInput" formControlName="imagenPokemon"><br><br>
+<input type="reset" value="Registrar" (click)="guardarDatos()">
+</form>
 </div>
 </mat-card-content>
 </mat-card>
