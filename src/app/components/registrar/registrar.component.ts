@@ -27,6 +27,11 @@ export class RegistrarComponent implements OnInit {
     imagenPokemon: new FormControl('', Validators.required),
 
   })
+  get nombrePokemonGet() {return this.miFormulario.get('nombrePokemon')}
+  get poderPokemonGet() {return this.miFormulario.get('poderPokemon')}
+  get imagenPokemonGet() {return this.miFormulario.get('imagenPokemon')}
+
+
 
   guardarDatos(nombre,poder,imagen){
     // this.nombreInput = document.getElementById("nombrePokemonInput");

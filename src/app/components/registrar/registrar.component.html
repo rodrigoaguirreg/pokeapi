@@ -1,4 +1,6 @@
+
 <mat-card class="matCard">
+  <button mat-icon-button class="close-button" [mat-dialog-close]="true">X</button>
   <mat-card-content>
   <div class="registrarrr container">
   <h1>Registrar Pokemon</h1>
@@ -6,11 +8,16 @@
 <form [formGroup]="miFormulario">
 <mat-label>Nombre:</mat-label><br>
 <input #nombrePoke matInput placeholder="nombre del pokemon" id="nombrePokemonInput" formControlName="nombrePokemon">
+<span class="error" *ngIf="nombrePokemonGet.invalid && nombrePokemonGet.touched">nombre invalido</span>
 <br>
 <label>Poder:</label><br>
-<input #poderPoke placeholder="poder del pokemon" id="poderPokemonInput" formControlName="poderPokemon"><br>
+<input #poderPoke placeholder="poder del pokemon" id="poderPokemonInput" formControlName="poderPokemon">
+<span class="error" *ngIf="poderPokemonGet.invalid && poderPokemonGet.touched">Poder invalido</span>
+<br>
 <label>Link de la imagen:</label><br>
-<input #imagenPoke placeholder="link" id="imagenPokemonInput" formControlName="imagenPokemon"><br><br>
+<input #imagenPoke placeholder="link" id="imagenPokemonInput" formControlName="imagenPokemon">
+<span class="error" *ngIf="imagenPokemonGet.invalid && imagenPokemonGet.touched">Imagen invalido</span>
+<br><br>
 <input [disabled]="miFormulario.invalid" type="reset" value="Registrar" (click)="guardarDatos(nombrePoke.value, poderPoke.value,imagenPoke.value)">
 </form>
 </div>

@@ -23,9 +23,9 @@ export class HeaderComponent implements OnInit {
   capturados(){
     this.router.navigateByUrl('/capturados')
   }
-  registrar(){
-    this.router.navigateByUrl('/registrar')
-  }
+  // registrar(){
+  //   this.router.navigateByUrl('/registrar')
+  // }
 
   handleSearch(value: string){
     console.log(value);

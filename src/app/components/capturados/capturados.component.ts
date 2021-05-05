@@ -60,4 +60,12 @@ export class CapturadosComponent implements OnInit {
           }
       })
   }
+  CambiarDatosArray(mensaje){
+    console.log(mensaje,'mensajemsnasej')
+    this.pokemons = mensaje;
+    // let ep = this.pokemons.find(encontrar => encontrar.nombre == mensaje)
+    // console.log(ep,'aquiiiiiiiiiiiiiiiiiii')
+    // this.pokemons = this.pokemons.filter(encontrado => (encontrado.tipo).toLowerCase() == mensaje.tipo);
+    // console.log(this.pokemons)
+  }
 }
