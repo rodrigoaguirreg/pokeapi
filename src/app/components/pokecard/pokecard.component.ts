@@ -11,6 +11,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import { RegistrarComponent } from '../registrar/registrar.component';
 import { Button } from 'selenium-webdriver';
 import { CantidadPokemonsComponent } from '../cantidad-pokemons/cantidad-pokemons.component';
+import { EditarComponent } from '../editar/editar.component';
 
 @Component({
   selector: 'app-pokecard',
@@ -28,16 +29,17 @@ export class PokecardComponent implements OnInit {
   desabilitar = 'false';
   @Input() filter_valor: string;
   @Input() modal_pokemon: string;
-  constructor(private pokeService: PokeserviciosService,
-              public dialog : MatDialog, private http: HttpClient,
-              private snackbar: MatSnackBar) { }
+  constructor(private _pokeService: PokeserviciosService,
+              private _dialog : MatDialog, private _http: HttpClient,
+              private _snackbar: MatSnackBar) { }
 
   async ngOnInit(): Promise<any> {
-    this.pokemons = await this.pokeService.getPokemones()
-    this.pokemonsCapturados = await this.pokeService.getPokemonsCapturados();
+    this.pokemons = await this._pokeService.getPokemones()
+    this.pokemonsCapturados = await this._pokeService.getPokemonsCapturados();
     this.search.valueChanges
     .pipe(
-      debounceTime(300)
+      //hacer que funcione
+      debounceTime(3000)
     )
     .subscribe(value => this.searchEmitter.emit(value));
 
@@ -54,9 +56,9 @@ export class PokecardComponent implements OnInit {
         boton.disabled = true
       }
       else{
-        this.http.post<PokemonCapturado>('https://6078e33de7f4f50017184d9f.mockapi.io/api/v1/smiledu/pokedex', { nombre: pokemonCapturadoNombre, tipo: pokemonCapturadoPoder, img: pokemonCapturadoImagen}).subscribe(data =>{
+        this._http.post<PokemonCapturado>('https://6078e33de7f4f50017184d9f.mockapi.io/api/v1/smiledu/pokedex', { nombre: pokemonCapturadoNombre, tipo: pokemonCapturadoPoder, img: pokemonCapturadoImagen}).subscribe(data =>{
         console.log(data)
-        this.snackbar.open('Pokemon Capturado', 'Cancelar', {
+        this._snackbar.open('Pokemon Capturado', 'Cancelar', {
           duration: 3000
         });
         });
@@ -65,7 +67,7 @@ export class PokecardComponent implements OnInit {
   }
 
     verPokemon(pokemon){
-      const dialogRef = this.dialog.open(ModalPokeComponent,{
+      const dialogRef = this._dialog.open(ModalPokeComponent,{
         width:'400px',
         data : {
           nombre: pokemon.nombre,
@@ -83,7 +85,7 @@ export class PokecardComponent implements OnInit {
     }
 9
     registrarPokemon(){
-      const dialogReferen = this.dialog.open(RegistrarComponent,{
+      const dialogReferen = this._dialog.open(RegistrarComponent,{
         width:'500px',disableClose:true
       })
       dialogReferen.afterClosed().subscribe(result => {
@@ -103,6 +105,30 @@ export class PokecardComponent implements OnInit {
       // console.log(ep,'aquiiiiiiiiiiiiiiiiiii')
       // this.pokemons = this.pokemons.filter(encontrado => (encontrado.tipo).toLowerCase() == mensaje.tipo);
       // console.log(this.pokemons)
+    }
+    editarPokemon(pokemon){
+      // const dialogReferen = this._dialog.open(EditarComponent,{
+      //   width:'500px',disableClose:true
+      // })
+      const dialogReferen = this._dialog.open(EditarComponent,{
+        width:'500px',
+        data:{
+          id:pokemon.id
+        }
+        ,disableClose:true
+      })
+      dialogReferen.afterClosed().subscribe(result => {
+        if(result.length){
+          this.pokemons[pokemon.id - 1].nombre = result.nombre
+          this.pokemons[pokemon.id - 1].tipo = result.tipo
+          this.pokemons[pokemon.id - 1].img = result.img
+        }
+        console.log(result,'here');
+         console.log(this.pokemons,'afterclose');
+      })
+
+
+      console.log('rodrigo')
     }
 
     search = new FormControl('')

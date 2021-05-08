@@ -10,7 +10,7 @@
     <mat-card-title>{{pokemo.tipo}}</mat-card-title>
   </mat-card-header>
   <div class="imagenCapturado">
-  <img mat-card-image src="{{pokemo.img}}" alt="Photo of a pokemons">
+  <img mat-card-image [src]="[pokemo.img]" alt="Photo of a pokemons">
 </div>
   <mat-card-content class="cardContent">
    <button class="button" (click)="elimarPokemonCapturado(pokemo)">Liberar</button>

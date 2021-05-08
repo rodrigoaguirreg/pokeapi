@@ -25,12 +25,13 @@
       <h3>{{pokemon.nombre}}</h3>
       <p>{{pokemon.tipo}}</p>
       <div class="imagencard">
-      <img mat-card-image width="80" height="100" src="{{pokemon.img}}" alt="Photo of a pokemons">
+      <img mat-card-image width="80" height="100" [src]="[pokemon.img]" alt="Photo of a pokemons">
     </div>
       <br>
 
       <button id="button" class="button" (click)="capturarPok(pokemon)" >Capturar</button><br>
       <button mat-raised-button class="button" (click)="verPokemon(pokemon)" >Ver</button>
+      <button mat-raised-button class="button" (click)="editarPokemon(pokemon)" >Editar</button>
     </div>
   </div>
 </div>

@@ -21,6 +21,8 @@ export class RegistrarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //formbuilder
+
   miFormulario = new FormGroup({
     nombrePokemon: new FormControl('', Validators.required),
     poderPokemon: new FormControl('', Validators.required),
@@ -33,21 +35,16 @@ export class RegistrarComponent implements OnInit {
 
 
 
+
   guardarDatos(nombre,poder,imagen){
-    // this.nombreInput = document.getElementById("nombrePokemonInput");
     this.nombreverdadero = nombre;
 
-    // this.poderInput = document.getElementById("poderPokemonInput");
     this.poderverdadero = poder;
 
-    // this.imagenInput = document.getElementById("imagenPokemonInput");
     this.imagenverdadero = imagen;
 
-
-        // .push(this.nombreInput.value, this.poderInput.value, this.imagenInput.value);
     this.http.post<NuevoPokemon>('https://6078e33de7f4f50017184d9f.mockapi.io/api/v1/smiledu/pokemons', { nombre: this.nombreverdadero, tipo: this.poderverdadero, img: this.imagenverdadero}).subscribe(data =>{
       console.log(data);
-
      });
      this.nuevoPokemon.push(this.nombreverdadero, this.poderverdadero, this.imagenverdadero);
 

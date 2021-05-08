@@ -22,6 +22,7 @@ import { RegistrarComponent } from './components/registrar/registrar.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ModalConfirmacionComponent } from './components/modal-confirmacion/modal-confirmacion.component';
 import { CantidadPokemonsComponent } from './components/cantidad-pokemons/cantidad-pokemons.component';
+import { EditarComponent } from './components/editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CantidadPokemonsComponent } from './components/cantidad-pokemons/cantid
     ModalPokeComponent,
     RegistrarComponent,
     ModalConfirmacionComponent,
-    CantidadPokemonsComponent
+    CantidadPokemonsComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
