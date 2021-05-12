@@ -49,7 +49,7 @@ export class RegistrarComponent implements OnInit {
      this.nuevoPokemon.push(this.nombreverdadero, this.poderverdadero, this.imagenverdadero);
 
      console.log(this.nuevoPokemon,'nuevopokemon');
-     this.dialogRef.close( this.nuevoPokemon)
+     this.dialogRef.close(this.nuevoPokemon)
 
   }
 

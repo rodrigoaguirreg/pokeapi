@@ -3,7 +3,7 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable, of } from 'rxjs';
 import { PokeserviciosService } from 'src/app/services/pokeservicios.service';
-import { PokecardComponent } from '../pokecard/pokecard.component';
+import { PokecardComponent } from '../../home/pokecard/pokecard.component';
 import { ModalConfirmacionComponent } from '../modal-confirmacion/modal-confirmacion.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { catchError, map } from 'rxjs/operators';

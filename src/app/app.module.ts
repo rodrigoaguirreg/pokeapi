@@ -11,18 +11,18 @@ import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokecardComponent } from './components/pokecard/pokecard.component';
-import { HeaderComponent } from './components/header/header.component';
-import { CapturadosComponent } from './components/capturados/capturados.component';
+import { PokecardComponent } from './modules/home/pokecard/pokecard.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { CapturadosComponent } from './modules/capturados/poke-capturados/capturados.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ModalPokeComponent } from './components/modal-poke/modal-poke.component';
+import { ModalPokeComponent } from './modules/home/modal-poke/modal-poke.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RegistrarComponent } from './components/registrar/registrar.component';
+import { RegistrarComponent } from './modules/home/registrar/registrar.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { ModalConfirmacionComponent } from './components/modal-confirmacion/modal-confirmacion.component';
-import { CantidadPokemonsComponent } from './components/cantidad-pokemons/cantidad-pokemons.component';
-import { EditarComponent } from './components/editar/editar.component';
+import { ModalConfirmacionComponent } from './modules/capturados/modal-confirmacion/modal-confirmacion.component';
+import { CantidadPokemonsComponent } from './shared/cantidad-pokemons/cantidad-pokemons.component';
+import { EditarComponent } from './modules/home/editar/editar.component';
 
 @NgModule({
   declarations: [

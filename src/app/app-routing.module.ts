@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CapturadosComponent } from './components/capturados/capturados.component';
-import { PokecardComponent } from './components/pokecard/pokecard.component';
-import { RegistrarComponent } from './components/registrar/registrar.component';
+import { CapturadosComponent } from './modules/capturados/poke-capturados/capturados.component';
+import { PokecardComponent } from './modules/home/pokecard/pokecard.component';
+import { RegistrarComponent } from './modules/home/registrar/registrar.component';
 
 const routes: Routes = [
 

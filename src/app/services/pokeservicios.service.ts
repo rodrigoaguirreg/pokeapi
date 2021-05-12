@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { PokecardComponent } from '../components/pokecard/pokecard.component';
+import { PokecardComponent } from '../modules/home/pokecard/pokecard.component';
 import { mapTo, map, catchError  } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
 

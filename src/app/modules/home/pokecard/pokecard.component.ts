@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { RegistrarComponent } from '../registrar/registrar.component';
 import { Button } from 'selenium-webdriver';
-import { CantidadPokemonsComponent } from '../cantidad-pokemons/cantidad-pokemons.component';
+import { CantidadPokemonsComponent } from '../../../shared/cantidad-pokemons/cantidad-pokemons.component';
 import { EditarComponent } from '../editar/editar.component';
 
 @Component({
@@ -89,7 +89,7 @@ export class PokecardComponent implements OnInit {
         width:'500px',disableClose:true
       })
       dialogReferen.afterClosed().subscribe(result => {
-        console.log(result,'here');
+        console.log(result,'here registrar');
         if(result.length >= 1){
           this.pokemons.unshift({nombre: result[0], tipo: result[1], img: result[2]});
         }
@@ -118,13 +118,11 @@ export class PokecardComponent implements OnInit {
         ,disableClose:true
       })
       dialogReferen.afterClosed().subscribe(result => {
-        if(result.length){
+        if(result.nombre){
           this.pokemons[pokemon.id - 1].nombre = result.nombre
           this.pokemons[pokemon.id - 1].tipo = result.tipo
           this.pokemons[pokemon.id - 1].img = result.img
         }
-        console.log(result,'here');
-         console.log(this.pokemons,'afterclose');
       })
 
 
