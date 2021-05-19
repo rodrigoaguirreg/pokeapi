@@ -36,7 +36,7 @@ export class RegistrarComponent implements OnInit {
 
 
 
-  guardarDatos(nombre,poder,imagen){
+  RegistarPokemon(nombre,poder,imagen){
     this.nombreverdadero = nombre;
 
     this.poderverdadero = poder;

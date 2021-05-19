@@ -23,6 +23,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ModalConfirmacionComponent } from './modules/capturados/modal-confirmacion/modal-confirmacion.component';
 import { CantidadPokemonsComponent } from './shared/cantidad-pokemons/cantidad-pokemons.component';
 import { EditarComponent } from './modules/home/editar/editar.component';
+import { LoginComponent } from './core/auth/login/login.component';
+import { PerfilComponent } from './modules/perfil/perfil.component';
+import { RegistroComponent } from './core/auth/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { EditarComponent } from './modules/home/editar/editar.component';
     RegistrarComponent,
     ModalConfirmacionComponent,
     CantidadPokemonsComponent,
-    EditarComponent
+    EditarComponent,
+    LoginComponent,
+    PerfilComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

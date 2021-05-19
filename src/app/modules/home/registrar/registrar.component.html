@@ -20,7 +20,7 @@
 <input #imagenPoke placeholder="link" id="imagenPokemonInput" formControlName="imagenPokemon">
 <span class="error" *ngIf="imagenPokemonGet.invalid && imagenPokemonGet.touched">Imagen invalido</span>
 <br><br>
-<input [disabled]="miFormulario.invalid" type="reset" value="Registrar" (click)="guardarDatos(nombrePoke.value, poderPoke.value,imagenPoke.value)">
+<input [disabled]="miFormulario.invalid" type="reset" value="Registrar" (click)="RegistarPokemon(nombrePoke.value, poderPoke.value,imagenPoke.value)">
 </form>
 </div>
 </mat-card-content>
